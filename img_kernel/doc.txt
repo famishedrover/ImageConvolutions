@@ -22,9 +22,16 @@ or  	python imageTransform.py [image-path] [output] [tweak]
 Kernel Selection :
 -o 		: Outline Kernel
 -b 		: Blur Kernel
--p 		: Custom1 Kernel / Blur1 Kernel
--q 		: Custom2 Kernel / Blur2 Kernel
+-c 		: Custom1 Kernel / Blur1 Kernel
+-u 		: Custom2 Kernel / Blur2 Kernel
 -d 		: Indentity Kernel
+-s		: Sharpen Kernel
+-e		: Emboss Kernel
+-l		: Left Sobel Kernel
+-r		: Right Sobel Kernel
+-t		: Top Sobel Kernel
+-m		: Bottom Sobel Kernel
+
 Default is Identity Kernel
 
 Kernel Intensity Selection

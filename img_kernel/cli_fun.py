@@ -27,12 +27,30 @@ def choose_kernel(argv) :
   elif '-b' in argv:
   	kernel = np.asarray(blur_kernel)
   	print 'Blur kernel selected'
-  elif '-p' in argv:
+  elif '-c' in argv:
     kernel = np.asarray(custom1_blur_kernel)
     print 'Custom1 blur kernel selected'
-  elif '-q' in argv:
+  elif '-u' in argv:
     kernel = np.asarray(custom2_blur_kernel)
     print 'Custom2 blur kernel selected'
+  elif '-s' in argv:
+    kernel = np.asarray(sharpen_kernel)
+    print 'Sharpen blur kernel selected'
+  elif '-e' in argv:
+    kernel = np.asarray(emboss_kernel)
+    print 'Emboss kernel selected'
+  elif '-l' in argv:
+    kernel = np.asarray(left_sobel_kernel)
+    print 'Left sobel kernel selected'
+  elif '-r' in argv:
+    kernel = np.asarray(right_sobel_kernel)
+    print 'Right sobel kernel selected'
+  elif '-t' in argv:
+    kernel = np.asarray(top_sobel_kernel)
+    print 'Top sobel kernel selected'
+  elif '-m' in argv:
+    kernel = np.asarray(bottom_sobel_kernel)
+    print 'Bottom sobel kernel selected'
   else :
     kernel = np.asarray(identity_kernel)
     print 'Default Identity kernel.'
