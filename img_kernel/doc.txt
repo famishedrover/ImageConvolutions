@@ -1,0 +1,69 @@
+Image Transform Documentation
+
+Open Doc as 
+	python imageTransform.py —doc
+
+Requirements :
+	Python2.x
+	cv2
+	numpy
+	matplotlib
+
+Works best with .png images.
+Untested with other image types.
+
+
+Run the script as 
+	python imageTransform.py [image-path] [tweak] [output]
+or  	python imageTransform.py [image-path] [output] [tweak]
+
+
+--------[tweak]--------
+Kernel Selection :
+-o 		: Outline Kernel
+-b 		: Blur Kernel
+-p 		: Custom1 Kernel / Blur1 Kernel
+-q 		: Custom2 Kernel / Blur2 Kernel
+-d 		: Indentity Kernel
+Default is Identity Kernel
+
+Kernel Intensity Selection
+-i<num> : Number of iterations for the selected kernel.
+		  More the <num> value higher the effect of kernel.
+		  Use :
+		  	-i1 means 1 iteration
+		  	-i2 means 2 iteration
+		  Maximum <num> limit upto 4.
+		  <num> can only be an integer.
+Default is 1.
+
+--------[output]--------
+--chk   :	Displays the kernelised image.
+			Close the displayed image for the scipt to run further.
+Default : 	Image is not displayed.
+
+--nsave :	Does not save the ouput image.
+			Black/White image and the ouput image is saved as
+			<imgname>_bw0.png			: for black/white image
+			<imgname>_bw_kernel0.png		: for kernelised image	
+			Saved image location is same as the input image location.
+			Image name changes if it already exists in the directory as 
+			Example :
+				if test_bw0.png or test_bw_kernel0.png already exists in 
+				directory then 0 in the end is incremented to 1 and so on 
+				until valid image name is found.
+Default : image is saved
+
+
+Example Use :
+
+1.	python imageTransform.py /Users/famishedrover/Desktop/test.png -b -i2 --chk --nsave
+	Blur Kernel , Intensity 2 , Output the kernelised image and Do not save it.
+
+2.	python imageTransform.py /Users/famishedrover/Desktop/test.png
+	Default Identity Kernel , Default Intensity 1 , No Display kernelised image, Save output.
+	
+
+
+
+
